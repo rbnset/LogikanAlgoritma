@@ -17,5 +17,4 @@ begin
 	readln;
 	write('Kelilingnya adalah : ',K);
 	readln;
-	read;
 end.

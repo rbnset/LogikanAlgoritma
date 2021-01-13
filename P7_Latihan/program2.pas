@@ -32,6 +32,7 @@ begin
 		begin
 			swap := a[I];
 			a[I] := a[J];
+			a[J] := swap;
 		end;
 	end;
 end;

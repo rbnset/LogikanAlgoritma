@@ -1,4 +1,4 @@
-Program Selection_sort_Descending;
+Program Tugas2_SelectionSort;
 uses crt;
 
 const   
@@ -31,8 +31,8 @@ begin
 Min:=i;
 For j:= i to n do
 begin
-    If L[j] > L[min] then
-    Min:=j;
+            If L[j] > L[min] then
+            Min:=j;
 End;
 Temp:=L[i];
     L[i]:=L[min];
@@ -40,6 +40,12 @@ Temp:=L[i];
 End;
 {===============TAMPIL DATA=========================}
 
+writeln;
+writeln('Data setelah Diurutkan dengan Selection Sort Ascending : ');
+for i := 1 to n do
+write(L[i],' ');
+readln;
+readln;
 writeln;
 writeln('Data setelah Diurutkan dengan Selection Sort Descending : ');
 for i := 1 to n do

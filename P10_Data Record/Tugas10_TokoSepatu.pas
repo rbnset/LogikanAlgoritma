@@ -12,8 +12,8 @@ end;
 
 var
   saya : string;
-  jumlahbarang,i,j : integer;
-  totalpembelian,tot,kembali,potongan,dibayar :real;
+  jumlahbarang,i,j,k : integer;
+  totalpembelian,tot,kembali,potongan,dibayarr :real;
   nama :string[20];
   barang :array [1..100] of data;
 
@@ -68,19 +68,11 @@ begin
 
  for j:= 1 to jumlahbarang do
   tot:= tot+barang[j].total;
-  potongan:=0;
-  if ( tot >= 500000 ) then
-    begin
-     potongan:=10/100;
-    end
-  else if ( tot >= 1000000 ) then  
-    begin
-      potongan:=20/100;
-    end;
 
+ for k := 1 to jumlahbarang do 
+   dibayarr:= dibayarr+barang[k].dibayar;
 
-  dibayar:= (tot-(tot*potongan));
-  writeln('                            Total Pembayaran    =  |',tot:11:2, '  |                  |  ',dibayar:11:2, '     |');
+  writeln('                            Total Pembayaran    =  |',tot:11:2, '  |                  |  ',dibayarr:11:2, '     |');
  end;
 
  readln;

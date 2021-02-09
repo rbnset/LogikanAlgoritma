@@ -53,7 +53,8 @@ begin
    barang[i].dibayar:=0;
     for i := 1 to jumlahbarang do begin
       barang[i].total:=barang[i].harga*barang[i].jumlah;
-      barang[i].dibayar:=barang[i].total*barang[i].dibayar;
+      barang[i].potongan:=barang[i].total*barang[i].potongan/100;
+      barang[i].dibayar:=barang[i].total-barang[i].Potongan;
        write(i:6);
        write(Barang[i].nama:17);
        write(barang[i].harga:18:2);
@@ -79,7 +80,7 @@ begin
 
 
   dibayar:= (tot-(tot*potongan));
-  writeln('                            Total Pembayaran    =  |',tot:11:2, '|                      |  ',dibayar:11:2, '|');
+  writeln('                            Total Pembayaran    =  |',tot:11:2, '  |                  |  ',dibayar:11:2, '     |');
  end;
 
  readln;
